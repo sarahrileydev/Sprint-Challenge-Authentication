@@ -13,6 +13,7 @@ class Jokes extends Component {
     axios
       .get(end)
       .then(res => {
+        console.log(res.data)
         this.setState({ jokes: res.data });
       })
       .catch(err => {
@@ -20,7 +21,6 @@ class Jokes extends Component {
       });
   }
   render() {
-       console.log(this.state.jokes)
     return (
        
       <div>

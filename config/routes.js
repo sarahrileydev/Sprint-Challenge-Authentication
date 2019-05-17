@@ -1,10 +1,14 @@
 const axios = require("axios");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const secrets = require("./secrets");
+
 const db = require("./models");
 
 const { authenticate } = require("../auth/authenticate");
+
+const jwtKey =
+  process.env.JWT_SECRET ||
+  'add a .env file to root of project with the JWT_SECRET variable';
 
 module.exports = server => {
   server.post("/api/register", register);
@@ -52,18 +56,16 @@ function login(req, res) {
     });
 }
 
-function generateToken(user) {
+function generateToken(user){
   const payload = {
     subject: user.id,
     username: user.username
   };
-
   const options = {
-    expiresIn: "1d"
+    expiresIn: '9d'
   };
-
-  return jwt.sign(payload, secrets.jwtSecret, options);
-}
+  return jwt.sign(payload, jwtKey, options)
+};
 
 function getJokes(req, res) {
   const requestOptions = {
