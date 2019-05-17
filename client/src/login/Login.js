@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Button from '@material-ui/core/Button';
 
 class Login extends React.Component {
   state = {
@@ -36,7 +37,7 @@ class Login extends React.Component {
             />
           </div>
           <div>
-            <button type="submit">Login</button>
+            <Button variant="contained" color="secondary" type="submit">Login</Button>
           </div>
         </form>
       </>

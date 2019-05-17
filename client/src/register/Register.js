@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import Button from '@material-ui/core/Button';
+
 
 class Register extends React.Component {
   state = {
@@ -37,7 +39,7 @@ class Register extends React.Component {
           </div>
          
           <div>
-            <button type="submit">Register</button>
+            <Button variant="contained" color="secondary" type="submit">Register</Button>
           </div>
         </form>
       </>
@@ -67,3 +69,4 @@ class Register extends React.Component {
 }
 
 export default Register;
+

@@ -34,5 +34,38 @@
 
 body {
   text-align: center;
+}
+
+p {
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  background-color: white;
+  box-shadow: 0 5px 10px lightgray;
+  width: 15%;
+  height: auto;
+  margin: 2%;
+  padding: 24px;
+}
+.jokes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+input {
+  margin: .5rem;
+}
+
+form {
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  background-color: white;
+  box-shadow: 0 5px 10px lightgray;
+  width: 15%;
+  margin: auto;
   padding: 2rem;
 }

@@ -25,7 +25,7 @@ class Jokes extends Component {
        
       <div>
         <h2>Jokes</h2>
-        <ul>
+        <ul className="jokes-container">
           {this.state.jokes.map(u => (
             <p key={u.id}>{u.joke}</p>
           ))}
